@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Jquery</title>
+    <style>
+      ul li{
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+      button,input{
+        width: 100%;
+        padding-bottom: 20px !important;
+        padding-top: 20px !important;
+        box-shadow: 0 0 1px #fff;
+        border-radius: 0 !important;
+
+      }
+      input{
+        background-color: #333 !important;
+        color: #fff !important;
+        border-color: transparent !important;
+      }
+    </style>
+  </head>
+  <body>
+ 
+ <div class="container py-5 my-5">
+
+  <!-- <input type="text" placeholder="Your Name" class="name"><br>
+  <input type="text" placeholder="Your E-mail" class="email"><br>
+  <input type="text" placeholder="Contact Number" class="number"><br>
+  <button type="button">Show Information</button>
+  <h1></h1> -->
+
+  <!-- <input type="text" placeholder="Type a color"><br>
+  <button type="button">Make body color</button> -->
+
+  <!-- <ul class="nav">
+    <li class="p-2"><button class="btn btn-dark">Red</button></li>
+    <li class="p-2"><button class="btn btn-success">Green</button></li>
+    <li class="p-2"><button class="btn btn-primary">Blue</button></li>
+    <li class="p-2"><button class="btn btn-dark">Dark</button></li>
+    <li class="p-2"><button class="btn btn-warning">Yellow</button></li>
+  </ul> -->
+
+<!--   <select>
+    <option>Select Color</option>
+    <option value="#bd2130">Red</option>
+    <option value="#1e7e34">Green</option>
+    <option value="#0062cc">Blue</option>
+  </select>
+   -->
+
+ <div class="row justify-content-center">
+   <div class="col-5">
+        
+        <input type="text" class="form-control" disabled>
+
+        <ul class="nav justify-content-between">
+          <li><button class="btn btn-dark one">1</button></li>
+          <li><button class="btn btn-dark two">2</button></li>
+          <li><button class="btn btn-dark three">3</button></li>
+          <li><button class="btn btn-dark four">4</button></li>
+          <li><button class="btn btn-dark five">5</button></li>
+        </ul>
+        <ul class="nav justify-content-between">
+          <li><button class="btn btn-dark six">6</button></li>
+          <li><button class="btn btn-dark seven">7</button></li>
+          <li><button class="btn btn-dark eight">8</button></li>
+          <li><button class="btn btn-dark nine">9</button></li>
+          <li><button class="btn btn-dark zero">0</button></li>
+        </ul>
+        <ul class="nav justify-content-between">
+          <li><button class="btn btn-dark add">+</button></li>
+          <li><button class="btn btn-dark sub">-</button></li>
+          <li><button class="btn btn-dark mul">*</button></li>
+          <li><button class="btn btn-dark div">/</button></li>
+          <li><button class="btn btn-dark equal">=</button></li>
+        </ul>
+       
+   </div>
+
+  <!--  <div class="col-7">
+    <button class="click btn-danger btn">Get Result</button>
+    <input type="text" class="result">
+     <h1> Result : <span></span></h1>
+   </div> -->
+    <div class="col-7">
+    <input type="text" class="result">
+    <button class="click btn-danger btn">Multiplication Table</button>
+    <h1></h1>
+   </div>
+
+ </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+
+
+   $(function(){
+
+    // $("h1").click(function(){
+    //    $("p").fadeOut();
+    // });
+    // var a = 3;
+    // var b = 6;
+    // var c =a+b;
+
+    // $("h1").text(c);
+
+     // $("button").click(
+     //  function(){
+
+     //    var a = $(".name").val();
+     //    var b = $(".email").val();
+     //    var c = $(".number").val();
+
+     //    $("h1").html("Your name is : " + a + "<br>" + "Your email is : " + b + "<br>"+"Your number is : " +c);
+
+     //  });
+
+     // $("button").click(function(){
+
+     //  var color = $("input").val();
+
+     //  $("body").css("background",color);
+
+     // });
+
+     // $(".btn-dark").hover(function(){
+
+     //    $("body").css("background", "#bd2130");
+     //  }
+     //  );
+     //  $(".btn-success").hover(function(){
+
+     //    $("body").css("background", "#1e7e34");
+        
+     //  }
+     //  );
+     //  $(".btn-primary").hover(function(){
+
+     //    $("body").css("background", "#0062cc");
+        
+     //  }
+     //  );
+     //  $(".btn-dark").hover(function(){
+
+     //    $("body").css("background", "#1d2124");
+        
+     //  }
+     //  );
+     //  $(".btn-warning").hover(function(){
+
+     //    $("body").css("background", "#d39e00");
+        
+     //  }
+     //  );
+
+     // $("select").change(function(){
+
+     //  var a = $("select").val();
+
+     //    $("body").css("background",a);
+        
+     // });
+
+     // $(".click").click(function(){
+     //  var a = $(".result").val();
+
+     //  if (a>=80){
+
+     //    $("span").text("A+");
+     //  }
+     //  else if (a>=70) {
+
+     //    $("span").text("A");
+     //  }
+     //  else if (a>=60) {
+
+     //    $("span").text("B");
+     //  }
+     //  else if (a>=50) {
+
+     //    $("span").text("C");
+     //  }
+     //  else if (a>=40) {
+
+     //    $("span").text("D");
+     //  }
+     //  else if (a>=33) {
+
+     //    $("span").text("E");
+     //  }
+     //  else{
+     //    $("span").text("Fail");
+     //  }
+     // });
+
+// namta
+    $(".click").click(function(){
+
+      var a = 10;
+      var c = $(".result").val();
+
+      var b = " ";
+
+      for (i = 1; i <= a; i++)
+
+        b += c + " X " + i + " = " + c*i + "<br>";
+
+      $("h1").html(b);
+
+    })
+// namta
+
+
+     var a = " ";
+     var In = $("input");
+
+     $(".one").click(function(){
+      a += 1;
+      In.val(a);
+     });
+     $(".two").click(function(){
+      a += 2;
+      In.val(a);
+     });
+      $(".three").click(function(){
+      a += 3;
+      In.val(a);
+     });
+     $(".four").click(function(){
+      a += 4;
+      In.val(a);
+     });
+      $(".five").click(function(){
+      a += 5;
+      In.val(a);
+     });
+     $(".six").click(function(){
+      a += 6;
+      In.val(a);
+     });
+      $(".seven").click(function(){
+      a += 7;
+      In.val(a);
+     });
+     $(".eight").click(function(){
+      a +=8;
+      In.val(a);
+     });
+      $(".nine").click(function(){
+      a += 9;
+      In.val(a);
+     });
+     $(".zero").click(function(){
+      a += 0;
+      In.val(a);
+     });
+     $(".add").click(function(){
+      a += "+";
+      In.val(a);
+     });
+      $(".sub").click(function(){
+      a += "-";
+      In.val(a);
+     });
+     $(".mul").click(function(){
+      a += "*";
+      In.val(a);
+     });
+      $(".div").click(function(){
+      a += "/";
+      In.val(a);
+     });
+     $(".equal").click(function(){
+      a = eval(In.val());
+      In.val(a);
+     });
+
+
+
+   });
+ </script>
+
+
+  </body>
+</html>
